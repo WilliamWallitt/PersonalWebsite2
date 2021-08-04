@@ -4,35 +4,42 @@ import backgroundImage from "../../Assets/homePage2.jpg"
 import ButtonComponent from "../Button/Buttons";
 import {Link} from "react-router-dom";
 import LanguageComponent from "../AboutPage/LangauageComponent";
-// import "./HomePage.css"
+// import {image_styling} from "../../Styles/BackgroundImage";
+// import {image_styling} from "../../Styles/BackgroundImage";
 
 // #183153 navy blue
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "Databases", "SQL", "CSS", "HTML"]
-const skills = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
-]
+const skills = [[], [], [], [], [], [], [], [], []]
 
-const image_styling = {
+let image_styling = null
 
-    backgroundImage: "url(" + backgroundImage + ")",
-    // backgroundColor: "white",
-    height: "95vh",
-    width: "100vw",
-    backgroundPosition: "center, center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    image_styling = {
+        backgroundColor: "black",
+        backgroundSize: "cover",
+        height: "100vh",
+        width: "100vw",
+        backgroundAttachment: "fixed"
+
+    }
+} else {
+    image_styling = {
+
+        backgroundImage: "url(" + backgroundImage + ")",
+            // backgroundColor: "white",
+        height: "100vh",
+        width: "100vw",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+
+    }
 
 }
+
+
 
 export default function HomePageComponent() {
 
@@ -43,7 +50,7 @@ export default function HomePageComponent() {
         <Container className="d-flex text-center align-items-center justify-content-center" fluid style={{width: "100vw", height: "100vw", ...image_styling}}>
 
             <Card className={window.innerWidth > 600 ? "text-center w-75 border border-dark border-5" : "text-center w-100 border border-dark border-5" } style={{
-                // backgroundColor: `rgb(238, 255, 31)`,
+                backgroundColor: `rgb(255, 255, 255, 0.94)`,
                 color: "#570861"
             }}>
                 <Card.Title>

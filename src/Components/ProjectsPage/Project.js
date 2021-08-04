@@ -19,7 +19,9 @@ export default function Project(props) {
                 <CardImg
                      src={props.data.image}
                      style={{
-                         width: '100%'
+                         width: '100%',
+                         // height: "70vh",
+                         backgroundSize: "cover"
                      }}
                 />
             </Link>

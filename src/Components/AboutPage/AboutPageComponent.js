@@ -2,6 +2,7 @@ import React from "react";
 import {Card, Container, Row} from "react-bootstrap";
 import backgroundImage from "../../Assets/homePage2.jpg"
 import LanguageComponent from "./LangauageComponent";
+import TagComponent from "../GithubPage/TagComponent";
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML"]
 const skills = [
@@ -16,18 +17,33 @@ const skills = [
     []
 ]
 
-const image_styling = {
+let image_styling = null
 
-    backgroundImage: "url(" + backgroundImage + ")",
-    // backgroundColor: "white",
-    height: "200vh",
-    width: "100vw",
-    backgroundPosition: "center, center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    image_styling = {
+        backgroundColor: "black",
+        height: "400vh",
+        width: "100vw",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+
+    }
+} else {
+    image_styling = {
+
+        backgroundImage: "url(" + backgroundImage + ")",
+        // backgroundColor: "white",
+        height: "300vh",
+        width: "100vw",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+
+    }
 
 }
+
 
 export default function AboutPageComponent() {
 
@@ -36,14 +52,17 @@ export default function AboutPageComponent() {
         <Container fluid style={{width: "100vw", height: "200vh", backgroundColor: "white", ...image_styling
         }}>
             <Card className="d-flex align-items-center justify-content-center text-start mx-auto border border-dark border-5" style={{
-                // backgroundColor: "#eeff1f",
+                backgroundColor: `rgb(255, 255, 255, 0.94)`,
                 color: "#570861",
+
                 transform: 'translate(0%, 5%)',
                 width: "80vw"
             }}>
                 <Card.Title className="p-2">
 
-                    <h1 className="m-5 h3 fw-bold fst-italic p-2 text-center">About me</h1>
+                    <h1 className="m-5 h3 fw-bold fst-italic p-2 text-center">
+                        <TagComponent name="About me" fontSize="h1"/>
+                    </h1>
 
                     <p className="lead fw-bold">
                         I'm a full-stack software engineer, that has just finished at Exeter University with a First Class Honours.
@@ -82,7 +101,7 @@ export default function AboutPageComponent() {
 
 
                     <p className="m-5 h3 fw-bold fst-italic p-2 text-center">
-                        Skills - click to view more information.
+                        <TagComponent name="Skills - click to view more information" fontSize="h3"/>
                     </p>
 
 

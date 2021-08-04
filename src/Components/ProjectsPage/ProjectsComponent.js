@@ -11,16 +11,30 @@ import yelpCampProject from "../../Assets/YelpCamp.png"
 import musicProject from "../../Assets/PATAPAPCLONE.png"
 
 
-const image_styling = {
+let image_styling = null;
 
-    backgroundImage: "url(" + backgroundImage + ")",
-    // backgroundColor: "white",
-    height: "200vh",
-    width: "100vw",
-    backgroundPosition: "center, center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    image_styling = {
+        backgroundColor: "black",
+        height: "200vh",
+        width: "100vw",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+
+    }
+} else {
+    image_styling = {
+
+        backgroundImage: "url(" + backgroundImage + ")",
+        // backgroundColor: "white",
+        height: "200vh",
+        width: "100vw",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed"
+
+    }
 
 }
 
@@ -30,7 +44,7 @@ const projects = [
     {
         name: "2D/3D Floorplan building tool",
         description: "Allowed client to build custom 2D floor plans of the house, " +
-            "shows the entire house in 3D along with required tasks for each room.",
+            "shows the entire house in 3D along. The user can click on a 3D room and see what current tasks need to be done for that room.",
         image: floorPlanner,
         tags: ["Javascript", "React", "Router", "Redux", "Hooks", "Three.js", "Boostrap", "Node.js", "Express.js", "Mongoose", "MongoDB"]
     },

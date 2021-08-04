@@ -4,16 +4,31 @@ import TagComponent from "./TagComponent";
 import backgroundImage from "../../Assets/homePage2.jpg"
 import ButtonComponent from "../Button/Buttons";
 
-const image_styling = {
+let image_styling = null
 
-    backgroundImage: "url(" + backgroundImage + ")",
-    // backgroundColor: "white",
-    height: "400vh",
-    width: "100vw",
-    backgroundPosition: "center, center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundAttachment: "fixed"
+if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    image_styling = {
+
+        backgroundColor: "black",
+        backgroundSize: "cover",
+        width: "100vw",
+        height: "500vh",
+        backgroundAttachment: "fixed"
+
+    }
+} else {
+
+        image_styling = {
+
+            backgroundImage: "url(" + backgroundImage + ")",
+            // backgroundColor: "white",
+            height: "auto",
+            width: "100vw",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed"
+    }
 
 }
 
@@ -75,7 +90,7 @@ export default class GitHubProjects extends React.Component {
                 // }}>
 
 
-                <Container fluid style={{width: "100vw", height: "400vh", backgroundColor: "white", ...image_styling
+                <Container fluid style={{width: "100vw", ...image_styling
                 }}>
                     <Container className="mx-auto" style={{transform: 'translate(0%, 5%)'}}>
                         {/*<Card className="text-center mx-auto rounded-lg shadow-lg" style={{ width: '18rem', backgroundColor: "#eeff1f"}}>*/}
@@ -91,7 +106,7 @@ export default class GitHubProjects extends React.Component {
                         </Card>
                     </Container>
 
-                    <Container variant="flush" className={window.innerWidth > 650 ? "mx-auto shadow-lg my-5 w-75" : "mx-auto shadow-lg my-5 w-100" }>
+                    <Container variant="flush" className={window.innerWidth > 650 ? "mx-auto my-5 w-75" : "mx-auto my-5 w-100" }>
                         {this.state.data.map((value, index) => (
                             <div key={index}  style={{backgroundColor: "transparent"}} className="my-2">
 
