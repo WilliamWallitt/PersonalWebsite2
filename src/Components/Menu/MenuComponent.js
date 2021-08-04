@@ -17,20 +17,17 @@ import image from "../../Assets/logo.PNG"
 export default function MenuComponent() {
 
 
-
-    // <ButtonComponent name="find out more"/>
-
     return (
 
         <Router>
             <div>
-                <Navbar expand="sm" style={{backgroundColor: "#eeff1f"}} sticky className="border border-dark shadow-lg">
+                <Navbar expand="sm" sticky className="border border-dark shadow-lg sticky-top bg-white">
 
-                    <NavbarBrand className="m-1">
+                    <NavLink className="h6 text-start">
                         <Link to="/">
                             <img src={image} style={{maxHeight: "100px", maxWidth: "70px"}}/>
                         </Link>
-                    </NavbarBrand>
+                    </NavLink>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2 border-dark"/>
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -55,8 +52,6 @@ export default function MenuComponent() {
 
                 </Navbar>
 
-                {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/spotify">
                         <SpotifyHomePage/>
@@ -70,6 +65,22 @@ export default function MenuComponent() {
                     <Route path="/about">
                         <AboutPageComponent/>
                     </Route>
+
+                    <Route path='/projects/astar' component={() => {
+                        window.location.href = 'https://astaralgorithm.herokuapp.com/';
+                        return null;
+                    }}/>
+
+                    <Route path='/projects/stcezair' component={() => {
+                        window.location.href = 'https://stcezaire.herokuapp.com/';
+                        return null;
+                    }}/>
+
+                    <Route path='/projects/clone' component={() => {
+                        window.location.href = 'https://nameless-ravine-50180.herokuapp.com/';
+                        return null;
+                    }}/>
+
                     <Route path="/">
                         <HomePageComponent/>
                     </Route>

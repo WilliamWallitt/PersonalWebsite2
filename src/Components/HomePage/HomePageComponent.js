@@ -1,6 +1,6 @@
 import React from "react";
 import {Card, Container, Row} from "react-bootstrap";
-import backgroundImage from "../../Assets/HomePage.jpg"
+import backgroundImage from "../../Assets/homePage2.jpg"
 import ButtonComponent from "../Button/Buttons";
 import {Link} from "react-router-dom";
 import LanguageComponent from "../AboutPage/LangauageComponent";
@@ -43,7 +43,7 @@ export default function HomePageComponent() {
         <Container className="d-flex text-center align-items-center justify-content-center" fluid style={{width: "100vw", height: "100vw", ...image_styling}}>
 
             <Card className={window.innerWidth > 600 ? "text-center w-75 border border-dark border-5" : "text-center w-100 border border-dark border-5" } style={{
-                backgroundColor: `rgb(238, 255, 31)`,
+                // backgroundColor: `rgb(238, 255, 31)`,
                 color: "#570861"
             }}>
                 <Card.Title>

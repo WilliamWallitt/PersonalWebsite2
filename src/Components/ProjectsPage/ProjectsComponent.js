@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../../Assets/HomePageTest.jpg";
+import backgroundImage from "../../Assets/homePage2.jpg"
 import {Carousel, Container, Row} from "react-bootstrap";
 import Project from "./Project";
 import floorPlanner from "../../Assets/floorplan.PNG"
@@ -9,6 +9,22 @@ import gameOfLife from "../../Assets/gameOfLife.PNG"
 import astarproject from "../../Assets/ASTAR.PNG"
 import yelpCampProject from "../../Assets/YelpCamp.png"
 import musicProject from "../../Assets/PATAPAPCLONE.png"
+
+
+const image_styling = {
+
+    backgroundImage: "url(" + backgroundImage + ")",
+    // backgroundColor: "white",
+    height: "200vh",
+    width: "100vw",
+    backgroundPosition: "center, center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
+
+}
+
+
 const projects = [
 
     {
@@ -24,6 +40,7 @@ const projects = [
         description: "Showed information about house, how to get there " +
             "and available activities. Implemented a booking system that notified client about potential renters",
         image: website,
+        linkTo: "/projects/stcezair",
         tags: ["Javascript", "React", "Router", "Boostrap", "Node.js", "Express.js", "Mongoose", "MongoDB"]
     },
 
@@ -39,6 +56,7 @@ const projects = [
         name: "A* pathfinding algorithm (solver and visualiser)",
         description: "Informed and Uninformed search methods are an extremely important topic to understand, so I built a visualiser for one of the most used informed search algorithms",
         image: astarproject,
+        linkTo: "/projects/astar",
         tags: ["Javascript", "React", "p5.js", "Boostrap"]
     },
 
@@ -61,6 +79,7 @@ const projects = [
         name: "Music player and visualiser",
         description: "A simple music player that plays different sounds depending on the key pressed and creates different shapes to visualise each sound.",
         image: musicProject,
+        linkTo: "/projects/clone",
         tags: ["Javascript", "p5.js", "howler.js", "HTML", "CSS"]
     }
 
@@ -75,7 +94,7 @@ export default function ProjectsComponent() {
         // <Container fluid style={{width: "100%", height: "1000px", backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover",
         //     backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed"
         // }}>
-        <Container fluid style={{width: "100vw", height: "400vh", backgroundColor: "white"
+        <Container fluid style={{width: "100vw", height: "200vh", backgroundColor: "white", ...image_styling
         }}>
 
             <Container fluid style={{backgroundColor: "#eeff1f",

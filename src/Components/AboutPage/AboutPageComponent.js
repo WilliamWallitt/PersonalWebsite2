@@ -1,7 +1,6 @@
 import React from "react";
 import {Card, Container, Row} from "react-bootstrap";
-import backgroundImage from "../../Assets/HomePageTest.jpg";
-import ButtonComponent from "../Button/Buttons";
+import backgroundImage from "../../Assets/homePage2.jpg"
 import LanguageComponent from "./LangauageComponent";
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML"]
@@ -17,18 +16,27 @@ const skills = [
     []
 ]
 
+const image_styling = {
+
+    backgroundImage: "url(" + backgroundImage + ")",
+    // backgroundColor: "white",
+    height: "200vh",
+    width: "100vw",
+    backgroundPosition: "center, center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
+
+}
+
 export default function AboutPageComponent() {
 
     return (
 
-        // <Container fluid style={{width: "100%", height: "100%", backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover",
-        //     backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed"
-        // }}>
-
-        <Container fluid style={{width: "100vw", height: "400vh", backgroundColor: "white"
+        <Container fluid style={{width: "100vw", height: "200vh", backgroundColor: "white", ...image_styling
         }}>
             <Card className="d-flex align-items-center justify-content-center text-start mx-auto border border-dark border-5" style={{
-                backgroundColor: "#eeff1f",
+                // backgroundColor: "#eeff1f",
                 color: "#570861",
                 transform: 'translate(0%, 5%)',
                 width: "80vw"
