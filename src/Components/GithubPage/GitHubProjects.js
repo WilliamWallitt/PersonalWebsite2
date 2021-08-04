@@ -119,7 +119,7 @@ export default class GitHubProjects extends React.Component {
                                 {/*<Row className="text-start">*/}
                                 <div className="d-flex justify-content-center">
                                     <div className="text-white">
-                                        <TagComponent name={"Created at:"} backgroundColor="#570861"/>
+                                        <TagComponent name="Created at: &#10140;" backgroundColor="#570861"/>
                                     </div>
                                     <TagComponent name={value.created_at.slice(0, 10)} backgroundColor="#eeff1f"/>
                                 </div>
@@ -127,7 +127,7 @@ export default class GitHubProjects extends React.Component {
                                 {value.description !== null && <div
                                     className="d-flex justify-content-center">
                                     <div className="text-white">
-                                        <TagComponent name={"Description:"} backgroundColor="#570861"/>
+                                        <TagComponent name="Description &#10140;" backgroundColor="#570861"/>
                                     </div>
                                     <TagComponent name={value.description} backgroundColor="#eeff1f"/>
                                 </div>
@@ -137,7 +137,7 @@ export default class GitHubProjects extends React.Component {
 
                                 <div className="d-flex justify-content-center">
                                     <div className="text-white">
-                                        <TagComponent name={"Coding languages:"} backgroundColor="#570861"/>
+                                        <TagComponent name="Coding languages &#10140;" backgroundColor="#570861"/>
                                     </div>
                                     <TagComponent name={value.language} backgroundColor="#eeff1f"/>
                                 </div>
