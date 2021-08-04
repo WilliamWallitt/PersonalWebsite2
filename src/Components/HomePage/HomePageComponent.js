@@ -54,7 +54,7 @@ export default function HomePageComponent() {
                 color: "#570861"
             }}>
                 <Card.Title>
-                    <h1 className="p-5 h3 fw-bold fst-italic">MY NAME IS WILLIAM WALLITT AND I'M A FULL-STACK WEB DEVELOPER</h1>
+                    <h1 className="p-5 h3 fw-bold fst-italic">MY NAME IS WILLIAM WALLITT AND I'M A FULL-STACK WEB DEVELOPER <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" alt="_" style={{width: "25px", height: "25px"}}/></h1>
                     <Link to="/about" className="text-decoration-none text-white">
                         <ButtonComponent name="about me &#10140;" backgroundColor="#570861"/>
                     </Link>

@@ -65,39 +65,37 @@ export default function AboutPageComponent() {
                     </h1>
 
                     <p className="lead fw-bold">
-                        I'm a full-stack software engineer, that has just finished at Exeter University with a First Class Honours.
+                        I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
                     </p>
 
                     <p>
-                        I love exploring and experimenting with new technology such as Machine Learning, Search Methods, Data analysis and pre-processing,
-                        Animations and Modern Front-End or Back-End Frameworks.
+                        I love exploring and experimenting with new technology such as Machine Learning, Search Methods, Data analysis and preprocessing, Animations and Modern Front-End or Back-End Frameworks.
                     </p>
 
                     <p>
-                        I have spent much of the last 3 years (when I started programming) teaching myself both Front-End and Back-End development using Javascript.
-                        This was perhaps most exciting way to learn a coding as you always end up with a visual product.
+                        I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using Javascript.
+                        Doing this was perhaps the most exciting way to learn to code, as you always end up with a visual product.
                     </p>
 
                     <p>
-                        Currently I am using the <code>MongoDB, Express.js, React <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" alt="_" style={{width: "25px", height: "25px"}}/>
-                        , Node.js </code>(MERN) stack to develop web applications.
-                        I also have experience in using <code>RESTful routing</code> in my node.js applications as well as a detailed understanding of <code>Boostrap</code> and <code>CSS Flexbox</code>.
-                        I have worked with animations libraries such as <code>P5.js</code> to allow me to visualise certain projects, such as my A* Pathfinding algorithm.
-                        I have also worked with 3D graphics libraries such as <code>Three.js</code> and Graphical libraries such as <code>Recharts</code>.
-                        I am able to also code in <code>Java</code>, <code>Python</code>, <code>Go</code> and <code>C#(ASP.NET)</code> to a competent level.
+                        Currently I am using <code><TagComponent name="React"/>, <TagComponent name="Node.js"/>, <TagComponent name="Express.js"/>
+                        , <TagComponent name="MongoDB"/> </code>(MERN) stack to develop web applications.
+                        I also have experience in using <code><TagComponent name="RESTful routing"/></code> in my node.js applications and a detailed understanding of <code><TagComponent name="Boostrap"/></code> and <code><TagComponent name="CSS Flexbox"/></code>.
+                        I have worked with animations libraries such as <code><TagComponent name="P5.js"/></code> to visualise specific projects, such as my A* Pathfinding algorithm.
+                        I have also worked with 3D graphics libraries such as <code><TagComponent name="Three.js"/></code> and Graphical libraries such as <code><TagComponent name="Recharts"/></code>.
+                        I can also code in <code><TagComponent name="Java"/></code>, <code><TagComponent name="Python"/></code>, <code><TagComponent name="Golang"/></code> and <code><TagComponent name="C#(ASP.NET)"/></code> to a competent level.
                     </p>
 
                     <p>
-                        During University I have developed an android app in Java using android studio. Created an interactive treasure trail web app that helps 1st year students find their way around campus,
-                        written my own K-Means-Clustering algorithm for classifying hand written digits in python. For data preprocessing, analysis and representations
-                        I have extensively used <code>Pandas</code>, <code>Matplotlib</code>, <code>Numpy</code> and <code>Scikit Learn</code> inside and outside University.
+                        During University, I have developed an android app in Java using android studio. I created an interactive treasure trail web app that helps 1st-year students find their way around campus, wrote a K-Means-Clustering algorithm for classifying handwritten digits in python,
+                        created Microservice architecture in Golang and deployed it using docker. For data preprocessing, analysis and representations,
+                        I have extensively used <code><TagComponent name="Pandas"/></code>, <code><TagComponent name="Matplotlib"/></code>, <code><TagComponent name="Numpy"/></code> and <code><TagComponent name="Scikit Learn"/></code> inside and outside University.
                     </p>
 
                     <p>
-                        For my final year project I developed a Chess AI that combines machine learning with search methods similar to the world renowned AlphaGo, developed back in 2015.
-                        This was built using <code> Tensorflow </code>and <code>Keras</code> and the objective was to compare the performance of traditional and new AI methods when applied to the game of Chess.
-                        AlphaGo required extensive research into Convolutional neural networks, Supervised and Reinforcement learning and search methods such as the Monte-Carlo tree search and Minimax search.
-                    </p>
+                        For my final year project, I developed a Chess AI that combines machine learning with search methods similar to the world-renowned AlphaGo, developed back in 2015.
+                        I built this using <code> <TagComponent name="Tensorflow (GPU)"/> </code>, <code> <TagComponent name="Keras"/> </code> and a fair bit of multiprocessing, and the objective was to compare the performance of traditional and new AI methods when applied to Chess.
+                        AlphaGo required extensive research into Convolutional neural networks, Supervised and Reinforcement learning and search methods such as the Monte-Carlo tree search and Minimax search.                    </p>
 
 
                     <p className="m-5 h3 fw-bold fst-italic p-2 text-center">
