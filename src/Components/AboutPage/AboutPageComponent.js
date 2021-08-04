@@ -3,6 +3,7 @@ import {Card, Container, Row} from "react-bootstrap";
 import backgroundImage from "../../Assets/homePage2.jpg"
 import LanguageComponent from "./LangauageComponent";
 import TagComponent from "../GithubPage/TagComponent";
+import AboutButtonComponent from "./AboutButton";
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML"]
 const skills = [
@@ -67,34 +68,40 @@ export default function AboutPageComponent() {
                     <p className="lead fw-bold">
                         I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
                     </p>
+                    <hr className="border-dark"/>
 
-                    <p>
+                    <p className="lead fst-italic">
                         I love exploring and experimenting with new technology such as Machine Learning, Search Methods, Data analysis and preprocessing, Animations and Modern Front-End or Back-End Frameworks.
                     </p>
+                    <hr className="border-dark"/>
 
                     <p>
-                        I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using Javascript.
+                        I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using <code> <AboutButtonComponent name="Javascript"/></code>.
                         Doing this was perhaps the most exciting way to learn to code, as you always end up with a visual product.
                     </p>
 
                     <p>
-                        Currently I am using <code><TagComponent name="React"/>, <TagComponent name="Node.js"/>, <TagComponent name="Express.js"/>
-                        , <TagComponent name="MongoDB"/> </code>(MERN) stack to develop web applications.
-                        I also have experience in using <code><TagComponent name="RESTful routing"/></code> in my node.js applications and a detailed understanding of <code><TagComponent name="Boostrap"/></code> and <code><TagComponent name="CSS Flexbox"/></code>.
-                        I have worked with animations libraries such as <code><TagComponent name="P5.js"/></code> to visualise specific projects, such as my A* Pathfinding algorithm.
-                        I have also worked with 3D graphics libraries such as <code><TagComponent name="Three.js"/></code> and Graphical libraries such as <code><TagComponent name="Recharts"/></code>.
-                        I can also code in <code><TagComponent name="Java"/></code>, <code><TagComponent name="Python"/></code>, <code><TagComponent name="Golang"/></code> and <code><TagComponent name="C#(ASP.NET)"/></code> to a competent level.
+                        Currently I am using <code><AboutButtonComponent name="React"/>,<AboutButtonComponent name="Node.js"/>,<AboutButtonComponent name="Express.js"/>
+                        ,<AboutButtonComponent name="MongoDB"/></code>(MERN) stack to develop web applications.
+                        I also have experience in using <code><AboutButtonComponent name="RESTful routing"/></code>
+                        in my node.js applications and a detailed understanding of <code><AboutButtonComponent name="Boostrap"/></code> and <code><AboutButtonComponent name="CSS Flexbox"/></code>.
+                        I have worked with animations libraries such as <code><AboutButtonComponent name="P5.js"/></code> to visualise specific projects, such as my A* Pathfinding algorithm.
+                        I have also worked with 3D graphics libraries such as <code><AboutButtonComponent name="Three.js"/></code> and Graphical libraries such as <code><AboutButtonComponent name="Recharts"/></code>.
+                        I can also code in <code><AboutButtonComponent name="Java"/></code>, <code><AboutButtonComponent name="Python"/></code>, <code><AboutButtonComponent name="Golang"/></code>
+                        and <code><AboutButtonComponent name="C#(ASP.NET)"/></code> to a competent level.
                     </p>
 
                     <p>
                         During University, I have developed an android app in Java using android studio. I created an interactive treasure trail web app that helps 1st-year students find their way around campus, wrote a K-Means-Clustering algorithm for classifying handwritten digits in python,
                         created Microservice architecture in Golang and deployed it using docker. For data preprocessing, analysis and representations,
-                        I have extensively used <code><TagComponent name="Pandas"/></code>, <code><TagComponent name="Matplotlib"/></code>, <code><TagComponent name="Numpy"/></code> and <code><TagComponent name="Scikit Learn"/></code> inside and outside University.
+                        I have extensively used <code><AboutButtonComponent name="Pandas"/></code>, <code><AboutButtonComponent name="Matplotlib"/></code>,
+                        <code><AboutButtonComponent name="Numpy"/></code> and <code><AboutButtonComponent name="Scikit Learn"/></code> inside and outside University.
                     </p>
 
                     <p>
                         For my final year project, I developed a Chess AI that combines machine learning with search methods similar to the world-renowned AlphaGo, developed back in 2015.
-                        I built this using <code> <TagComponent name="Tensorflow (GPU)"/> </code>, <code> <TagComponent name="Keras"/> </code> and a fair bit of multiprocessing, and the objective was to compare the performance of traditional and new AI methods when applied to Chess.
+                        I built this using <code> <AboutButtonComponent name="Tensorflow (GPU)"/></code>,<code><AboutButtonComponent name="Keras"/></code> and a fair bit of multiprocessing,
+                        and the objective was to compare the performance of traditional and new AI methods when applied to Chess.
                         AlphaGo required extensive research into Convolutional neural networks, Supervised and Reinforcement learning and search methods such as the Monte-Carlo tree search and Minimax search.                    </p>
 
 

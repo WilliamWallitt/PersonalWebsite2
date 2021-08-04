@@ -1,0 +1,9 @@
+.about {
+    margin: 1px;
+    display: inline-block;
+    border: 1px solid black;
+    /*width: 6rem;*/
+    padding: 1px;
+    box-shadow: 4px 4px grey;
+
+}
