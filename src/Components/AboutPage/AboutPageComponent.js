@@ -7,7 +7,7 @@ import AboutButtonComponent from "./AboutButton";
 import Col from "react-bootstrap/Col";
 import spaceImage from "../../Assets/explorationImage.jpg"
 
-const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML"]
+const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML", "Shopify"]
 const skills = [
     ["React", "Redux", "Router", "P5.js", "Firebase", "Three.js", "Recharts", "RESTFul Routing", "Passport.js", "Mocha", "Chai", "Jasmine", "Mongoose"],
     ["Pandas", "Matplotlib", "Numpy", "Keras", "Tensorflow", "Scikit learn"],
@@ -15,6 +15,7 @@ const skills = [
     ["Android Development", "Multithreading"],
     ["Microservices", "REST API's", "Docker"],
     ["MongoDB", "Postgre SQL", "mySQL server"],
+    [],
     [],
     [],
     []
@@ -54,10 +55,11 @@ export default function AboutPageComponent() {
 
         <Container fluid style={{width: "100vw", height: "200vh", backgroundColor: "white", ...image_styling
         }}>
-            <Card className={window.innerWidth > 700 ? "d-flex align-items-center justify-content-center text-start mx-auto w-75 border border-dark border-5" :
-            "d-flex align-items-center justify-content-center text-start w-100 border border-dark border-5"} style={{
-                backgroundColor: `rgb(255, 255, 255, 0.94)`,
-                color: "#570861",
+            <Card className={window.innerWidth > 700 ? "d-flex align-items-center justify-content-center text-start mx-auto w-75" :
+            "d-flex align-items-center justify-content-center text-start w-100"} style={{
+                // backgroundColor: `rgb(255, 255, 255, 0.94)`,
+                backgroundColor: "transparent",
+                color: "white",
                 transform: 'translate(0%, 5%)',
             }}>
 
@@ -69,7 +71,9 @@ export default function AboutPageComponent() {
 
                     <p style={{
                         backgroundImage: `url(${'https://media.giphy.com/media/RetcDrOQFZRR3e4R8z/giphy.gif'})`,
-                    }} className="w-100 text-center">
+                        backgroundColor: `rgb(255, 255, 255, 0.94)`,
+                        color: "#570861",
+                    }} className="w-75 mx-auto text-center p-2 rounded">
                         I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
                     </p>
 
@@ -87,37 +91,44 @@ export default function AboutPageComponent() {
                     </Row>
 
 
-                    <p className="lead mt-3">
-                        I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using <code> <AboutButtonComponent name="Javascript"/></code>.
-                        Doing this was perhaps the most exciting way to learn to code, as you always end up with a visual product.
-                    </p>
+                    <Row style={{
+                        backgroundColor: `rgb(41, 43, 41, 0.8)`
+                    }} className="mt-2">
 
-                    <p className="lead">
-                        Currently I am using <code><AboutButtonComponent name="React"/>,<AboutButtonComponent name="Node.js"/>,<AboutButtonComponent name="Express.js"/>
-                        ,<AboutButtonComponent name="MongoDB"/></code>(MERN) stack to develop web applications.
-                        I also have experience in using <code><AboutButtonComponent name="RESTful routing"/></code>
-                        in my node.js applications and a detailed understanding of <code><AboutButtonComponent name="Boostrap"/></code> and <code><AboutButtonComponent name="CSS Flexbox"/></code>.
-                        I have worked with animations libraries such as <code><AboutButtonComponent name="P5.js"/></code> to visualise specific projects, such as my A* Pathfinding algorithm.
-                        I have also worked with 3D graphics libraries such as <code><AboutButtonComponent name="Three.js"/></code> and Graphical libraries such as <code><AboutButtonComponent name="Recharts"/></code>.
-                        I can also code in <code><AboutButtonComponent name="Java"/></code>, <code><AboutButtonComponent name="Python"/></code>, <code><AboutButtonComponent name="Golang"/></code>
-                        and <code><AboutButtonComponent name="C#(ASP.NET)"/></code> to a competent level.
-                    </p>
+                        <p className="lead mt-3">
+                            I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using <code> <AboutButtonComponent name="Javascript"/></code>.
+                            Doing this was perhaps the most exciting way to learn to code, as you always end up with a visual product.
+                        </p>
 
-                    <p className="lead">
-                        During University, I have developed an android app in Java using android studio. I created an interactive treasure trail web app that helps 1st-year students find their way around campus, wrote a K-Means-Clustering algorithm for classifying handwritten digits in python,
-                        created Microservice architecture in Golang and deployed it using docker. For data preprocessing, analysis and representations,
-                        I have extensively used <code><AboutButtonComponent name="Pandas"/></code>, <code><AboutButtonComponent name="Matplotlib"/></code>,
-                        <code><AboutButtonComponent name="Numpy"/></code> and <code><AboutButtonComponent name="Scikit Learn"/></code>.
-                    </p>
+                        <p className="lead">
+                            Currently I am using <code><AboutButtonComponent name="React"/>,<AboutButtonComponent name="Node.js"/>,<AboutButtonComponent name="Express.js"/>
+                            ,<AboutButtonComponent name="MongoDB"/></code>(MERN) stack to develop web applications.
+                            I also have experience in using <code><AboutButtonComponent name="RESTful routing"/></code>
+                            in my node.js applications and a detailed understanding of <code><AboutButtonComponent name="Boostrap"/></code> and <code><AboutButtonComponent name="CSS Flexbox"/></code>.
+                            I have worked with animations libraries such as <code><AboutButtonComponent name="P5.js"/></code> to visualise specific projects, such as my A* Pathfinding algorithm.
+                            I have also worked with 3D graphics libraries such as <code><AboutButtonComponent name="Three.js"/></code> and Graphical libraries such as <code><AboutButtonComponent name="Recharts"/></code>.
+                            I can also code in <code><AboutButtonComponent name="Java"/></code>, <code><AboutButtonComponent name="Python"/></code>, <code><AboutButtonComponent name="Golang"/></code>
+                            and <code><AboutButtonComponent name="C#(ASP.NET)"/></code> to a competent level.
+                        </p>
 
-                    <p className="lead">
-                        For my final year project, I developed a Chess AI that combines machine learning with search methods similar to the world-renowned AlphaGo, developed back in 2015.
-                        I built this using <code> <AboutButtonComponent name="Tensorflow (GPU)"/></code>,<code><AboutButtonComponent name="Keras"/></code> and a fair bit of multiprocessing,
-                        and the objective was to compare the performance of traditional and new AI methods when applied to Chess.
-                        AlphaGo required extensive research into <code> <AboutButtonComponent name="Convolutional Neural Networks"/></code>,
-                        <code><AboutButtonComponent name="Supervised"/></code> and <code><AboutButtonComponent name="Reinforcement Learning"/></code>
-                        and search methods such as the <code><AboutButtonComponent name="Monte-Carlo tree search"/></code> and <code><AboutButtonComponent name="Minimax Search"/></code>.
-                    </p>
+                        <p className="lead">
+                            During University, I have developed an android app in Java using android studio. I created an interactive treasure trail web app that helps 1st-year students find their way around campus, wrote a K-Means-Clustering algorithm for classifying handwritten digits in python,
+                            created Microservice architecture in Golang and deployed it using docker. For data preprocessing, analysis and representations,
+                            I have extensively used <code><AboutButtonComponent name="Pandas"/></code>, <code><AboutButtonComponent name="Matplotlib"/></code>,
+                            <code><AboutButtonComponent name="Numpy"/></code> and <code><AboutButtonComponent name="Scikit Learn"/></code>.
+                        </p>
+
+                        <p className="lead">
+                            For my final year project, I developed a Chess AI that combines machine learning with search methods similar to the world-renowned AlphaGo, developed back in 2015.
+                            I built this using <code> <AboutButtonComponent name="Tensorflow (GPU)"/></code>,<code><AboutButtonComponent name="Keras"/></code> and a fair bit of multiprocessing,
+                            and the objective was to compare the performance of traditional and new AI methods when applied to Chess.
+                            AlphaGo required extensive research into <code> <AboutButtonComponent name="Convolutional Neural Networks"/></code>,
+                            <code><AboutButtonComponent name="Supervised"/></code> and <code><AboutButtonComponent name="Reinforcement Learning"/></code>
+                            and search methods such as the <code><AboutButtonComponent name="Monte-Carlo tree search"/></code> and <code><AboutButtonComponent name="Minimax Search"/></code>.
+                        </p>
+                    </Row>
+
+
 
 
                     <p className="mt-5 h3 fw-bold fst-italic p-2 text-center text-white">
@@ -126,7 +137,7 @@ export default function AboutPageComponent() {
 
 
                 </Card.Title>
-                <Card.Text>
+                <Card.Text style={{backgroundColor: `rgb(41, 43, 41, 0.8)`}}>
                     <Container fluid className="d-flex justify-content-center flex-wrap w-75 mb-5">
                         {currentLanguages.map((currentLanguage, index) => (<LanguageComponent language={currentLanguage} skills={skills[index]}/>
                         ))}
