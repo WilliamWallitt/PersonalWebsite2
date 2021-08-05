@@ -7,8 +7,8 @@ export default function AboutButtonComponent(props) {
 
         props.backgroundColor === undefined ?
 
-            <div className="about bg-white">
-                <h1 className={props.fontSize !== undefined ? props.fontSize: "small h6"}>
+            <div className="about" style={{backgroundColor: "#570861"}}>
+                <h1 className={props.fontSize !== undefined ? props.fontSize: "small h6 text-white"}>
                     {props.name}
                 </h1>
             </div> :
