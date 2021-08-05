@@ -67,7 +67,9 @@ export default function AboutPageComponent() {
                         <TagComponent name="About me" fontSize="h1" backgroundColor="#570861"/>
                     </h1>
 
-                    <p>
+                    <p style={{
+                        backgroundImage: `url(${'https://media.giphy.com/media/RetcDrOQFZRR3e4R8z/giphy.gif'})`,
+                    }} className="w-100 text-center">
                         I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
                     </p>
 

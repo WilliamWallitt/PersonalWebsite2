@@ -32,19 +32,19 @@ export default function MenuComponent() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2 border-dark"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">
-                            <NavLink className="h6 text-start">
+                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/" className="text-decoration-none text-dark"><ButtonComponent name="Home"/></Link>
                             </NavLink>
-                            <NavLink className="h6 text-start">
+                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/about" className="text-decoration-none text-dark"><ButtonComponent name="About"/></Link>
                             </NavLink>
-                            <NavLink className="h6 text-start">
+                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/github" className="text-decoration-none text-dark"> <ButtonComponent name="Github"/></Link>
                             </NavLink>
-                            <NavLink className="h6 text-start">
+                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/projects" className="text-decoration-none text-dark"><ButtonComponent name="Projects"/></Link>
                             </NavLink>
-                            <NavLink className="h6 text-start">
+                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/spotify" className="text-decoration-none text-dark"> <ButtonComponent name="Spotify"/></Link>
                             </NavLink>
                         </Nav>
