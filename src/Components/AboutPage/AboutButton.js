@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutButton.css"
+import "../HomePage/Title.scss"
 
 export default function AboutButtonComponent(props) {
 

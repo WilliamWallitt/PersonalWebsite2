@@ -31,8 +31,8 @@ export default function Project(props) {
                     <p className="lead">{props.data.description}</p>
                 </Row>
                 <Row>
-                    <h1 className="fst-italic">
-                        <TagComponent name="Coding languages / techniques used" fontSize="h3"/>
+                    <h1 className="fst-italic lead">
+                        <TagComponent name="Coding languages / techniques used" fontSize="h6" backgroundColor="#570861"/>
                     </h1>
                     <Container fluid className="d-flex justify-content-center flex-wrap w-100 mb-5 p-2">
                         {props.data.tags.map(tag => (
@@ -40,7 +40,7 @@ export default function Project(props) {
                                 backgroundColor: "#eeff1f",
                                 color: "#570861"
                             }}>
-                                <TagComponent name={tag} fontSize="lead"/>
+                                <TagComponent name={tag} fontSize="h6"/>
                             </div>
                         ))}
                     </Container>

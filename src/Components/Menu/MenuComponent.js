@@ -14,6 +14,8 @@ import ProjectsComponent from "../ProjectsPage/ProjectsComponent";
 import SpotifyHomePage from "../SpotifyPage/SpotifyHomePage";
 import image from "../../Assets/logo.PNG"
 
+
+
 export default function MenuComponent() {
 
 
@@ -21,7 +23,7 @@ export default function MenuComponent() {
 
         <Router>
             <div>
-                <Navbar expand="sm" sticky className="border border-dark shadow-lg sticky-top bg-white">
+                <Navbar expand="md" sticky className="border border-dark shadow-lg sticky-top bg-white">
 
                     <NavLink className="h6 text-start">
                         <Link to="/">
@@ -33,7 +35,9 @@ export default function MenuComponent() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">
                             <NavLink className="h6 text-start p-1 m-1">
-                                <Link to="/" className="text-decoration-none text-dark"><ButtonComponent name="Home"/></Link>
+                                <Link to="/" className="text-decoration-none text-dark">
+                                    <ButtonComponent name="Home"/>
+                                </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/about" className="text-decoration-none text-dark"><ButtonComponent name="About"/></Link>

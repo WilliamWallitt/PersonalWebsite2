@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.css"
+import "../HomePage/Title.scss"
 
 export default function ButtonComponent(props) {
 
@@ -7,11 +8,11 @@ export default function ButtonComponent(props) {
 
         props.backgroundColor === undefined ?
         <div className="button">
-            <h1 className="lead">{props.name}</h1>
+            <h1 className="lead" data-heading="" id="menu">{props.name}</h1>
         </div> :
 
         <div className="button" style={{backgroundColor: props.backgroundColor}}>
-            <h1 className="lead">{props.name}</h1>
+            <h1 className="lead" data-heading="" id="menu">{props.name}</h1>
         </div>
 
 
