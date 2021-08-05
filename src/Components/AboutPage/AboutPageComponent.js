@@ -66,7 +66,7 @@ export default function AboutPageComponent() {
                 <Card.Title className="p-2">
 
                     <h1 className="m-5 h3 fw-bold fst-italic p-2 text-center text-white">
-                        <TagComponent name="About me" fontSize="h1" backgroundColor="#570861"/>
+                        <TagComponent name="About me" fontSize="h1"/>
                     </h1>
 
                     <p style={{
@@ -132,13 +132,16 @@ export default function AboutPageComponent() {
 
 
                     <p className="mt-5 h3 fw-bold fst-italic p-2 text-center text-white">
-                        <TagComponent name="Skills - click to view more information" fontSize="h3" backgroundColor="#570861"/>
+                        <TagComponent name="Skills - click to view more information" fontSize="h3"/>
                     </p>
 
 
                 </Card.Title>
-                <Card.Text style={{backgroundColor: `rgb(41, 43, 41, 0.8)`}}>
-                    <Container fluid className="d-flex justify-content-center flex-wrap w-75 mb-5">
+                <Card.Text style={{
+                    backgroundColor: "white"
+                    // backgroundColor: `rgb(41, 43, 41, 0.8)`
+                }} className="rounded">
+                    <Container fluid className="d-flex justify-content-center flex-wrap w-75 mb-5 pt-5">
                         {currentLanguages.map((currentLanguage, index) => (<LanguageComponent language={currentLanguage} skills={skills[index]}/>
                         ))}
                     </Container>
