@@ -73,7 +73,8 @@ export default function AboutPageComponent() {
 
                     <Row className="w-75 mx-auto">
                         <Card className="d-flex flex-row flex-wrap">
-                            <Card.Img src={spaceImage} style={{height: "inherit", width: "inherit", backgroundSize: "contain", backgroundPosition: "center"}}/>
+                            <Card.Img src={spaceImage} style={{backgroundSize: "contain", backgroundPosition: "center", width: "100%",
+                            height: "auto", alignSelf: "flex-start"}}/>
                             <Card.Text>
                                 <p className="lead p-2" style={{color: "white", backgroundColor: "#570861"}}>
                                     I love exploring and experimenting with new technology such as Machine Learning,
