@@ -20,7 +20,7 @@ export default function Project(props) {
                      src={props.data.image}
                      style={{
                          width: '100%',
-                         // height: "70vh",
+                         // maxWidth: "100%",
                          backgroundSize: "cover"
                      }}
                 />

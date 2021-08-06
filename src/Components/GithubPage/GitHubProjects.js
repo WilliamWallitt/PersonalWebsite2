@@ -100,7 +100,7 @@ export default class GitHubProjects extends React.Component {
                             <Card.Body>
 
                                 <Button variant="outline-none text-white" href={this.state.data[0].owner.html_url}>
-                                    <ButtonComponent name={this.state.data[0].owner.login}/>
+                                    <ButtonComponent name={this.state.data[0].owner.login} backgroundColor="white"/>
                                 </Button>
                             </Card.Body>
                         </Card>

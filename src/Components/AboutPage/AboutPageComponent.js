@@ -6,6 +6,7 @@ import TagComponent from "../GithubPage/TagComponent";
 import AboutButtonComponent from "./AboutButton";
 import Col from "react-bootstrap/Col";
 import spaceImage from "../../Assets/explorationImage.jpg"
+import ButtonComponent from "../Button/Buttons";
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML", "Shopify"]
 const skills = [
