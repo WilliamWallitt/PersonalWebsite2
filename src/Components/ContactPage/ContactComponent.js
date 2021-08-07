@@ -57,7 +57,6 @@ export default function ContactComponent() {
         // submit details to /contact/
         let data = await fetch("/api/contact", {
             method: "POST",
-            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
             },
