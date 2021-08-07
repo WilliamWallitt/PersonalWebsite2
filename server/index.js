@@ -1,10 +1,13 @@
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
+const path = require("path")
+const buildPath = path.join(__dirname, '..', 'build');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
+app.use(express.static(buildPath));
 app.use(require("./API"))
 
 
