@@ -13,6 +13,8 @@ import GitHubComponent from "../GithubPage/GitHubComponent";
 import ProjectsComponent from "../ProjectsPage/ProjectsComponent";
 import SpotifyHomePage from "../SpotifyPage/SpotifyHomePage";
 import image from "../../Assets/logo.PNG"
+import TagComponent from "../GithubPage/TagComponent";
+import ContactComponent from "../ContactPage/ContactComponent";
 
 
 
@@ -25,11 +27,11 @@ export default function MenuComponent() {
             <div>
                 <Navbar expand="md" sticky className="border border-dark shadow-lg sticky-top bg-white">
 
-                    <NavLink className="h6 text-start">
-                        <Link to="/">
-                            <img src={image} style={{maxHeight: "100px", maxWidth: "70px"}}/>
-                        </Link>
-                    </NavLink>
+                    {/*<NavLink className="h6 text-start">*/}
+                    {/*    <Link to="/">*/}
+                    {/*        <img src={image} style={{maxHeight: "100px", maxWidth: "70px"}}/>*/}
+                    {/*    </Link>*/}
+                    {/*</NavLink>*/}
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2 border-dark"/>
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -54,6 +56,12 @@ export default function MenuComponent() {
                         </Nav>
                     </Navbar.Collapse>
 
+                    <NavLink className="text-start p-1 m-1">
+                        <Link to="/contact" className="text-decoration-none text-dark">
+                            <TagComponent name="Contact" backgroundColor="black"/>
+                        </Link>
+                    </NavLink>
+
                 </Navbar>
 
                 <Switch>
@@ -68,6 +76,9 @@ export default function MenuComponent() {
                     </Route>
                     <Route path="/about">
                         <AboutPageComponent/>
+                    </Route>
+                    <Route path="/contact">
+                        <ContactComponent/>
                     </Route>
 
                     <Route path='/projects/astar' component={() => {

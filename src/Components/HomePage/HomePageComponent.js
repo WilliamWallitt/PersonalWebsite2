@@ -45,7 +45,7 @@ export default function HomePageComponent() {
     return (
 
 
-        <Container className="d-flex text-center align-items-center justify-content-center" fluid style={{width: "100vw", height: "100vw", ...image_styling}}>
+        <Container className="d-flex text-center align-items-center justify-content-center" fluid style={{width: "100vw", height: "90vh", ...image_styling}}>
             {/* border border-dark border-5*/}
             <Card className={window.innerWidth > 600 ? "text-center w-75" : "text-center w-100" } style={{
                 // backgroundColor: `rgb(255, 255, 255, 0.94)`,
