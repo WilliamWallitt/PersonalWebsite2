@@ -25,7 +25,7 @@ class EmailHandler {
 }
 
 
-router.post('https://williamwallitt.herokuapp.com/api/contact', (req, res) => {
+router.post('/api/contact', (req, res) => {
 
     let data = req.body
     let emailHandler = new EmailHandler()
