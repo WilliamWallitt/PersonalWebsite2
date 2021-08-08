@@ -55,13 +55,13 @@ export default function ContactComponent() {
 
     async function onSubmit() {
         // submit details to /contact/
-        let data = await fetch("/contact", {
+        let data = await fetch("/api/contact", {
             method: "GET",
             mode: "same-origin",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
+            // headers: {
+            //     'Content-Type': 'application/json'
+            // },
+            // body: JSON.stringify(userData)
         }).then(res => res.json()).then(data => data)
         console.log(data)
     }

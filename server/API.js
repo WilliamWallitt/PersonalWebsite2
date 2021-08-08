@@ -27,16 +27,22 @@ class EmailHandler {
 
 router.get('/contact', (req, res, next) => {
 
-    let data = req.body
-    let emailHandler = new EmailHandler()
-    emailHandler.send(data).then(
-        emailResponse => {
-            res.setHeader('Content-Type', 'application/json');
-            res.json({
-                msg: emailResponse
-            })
-        }
-    )
+    // let data = req.body
+    // let emailHandler = new EmailHandler()
+    // emailHandler.send(data).then(
+    //     emailResponse => {
+    //         res.setHeader('Content-Type', 'application/json');
+    //         res.json({
+    //             msg: emailResponse
+    //         })
+    //     }
+    // )
+
+    res.send({
+        request: "success"
+    })
+
+
 
 });
 
