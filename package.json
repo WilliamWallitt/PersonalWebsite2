@@ -11,6 +11,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.0.2",
+    "concurrently": "^6.2.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
@@ -24,10 +25,9 @@
     "build": "react-scripts build && (cd server && yarn install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "cd server && yarn start"
-
+    "start-server": "cd server && yarn start",
+    "start": "concurrently \"yarn start-client\" \"yarn start-server\""
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",

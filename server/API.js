@@ -25,25 +25,18 @@ class EmailHandler {
 }
 
 
-router.get('/api/contact', (req, res, next) => {
+router.post('/api/contact', (req, res, next) => {
 
-    // let data = req.body
-    // let emailHandler = new EmailHandler()
-    // emailHandler.send(data).then(
-    //     emailResponse => {
-    //         res.setHeader('Content-Type', 'application/json');
-    //         res.json({
-    //             msg: emailResponse
-    //         })
-    //     }
-    // )
-
-    res.send({
-        request: "success"
-    })
-
-
-
+    let data = req.body
+    let emailHandler = new EmailHandler()
+    emailHandler.send(data).then(
+        emailResponse => {
+            res.setHeader('Content-Type', 'application/json');
+            res.json({
+                msg: emailResponse
+            })
+        }
+    )
 });
 
 module.exports = router
