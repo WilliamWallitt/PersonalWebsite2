@@ -25,14 +25,16 @@ class EmailHandler {
 }
 
 
-router.post('/contact', (req, res) => {
+router.post('/contact', (req, res, next) => {
 
     let data = req.body
     let emailHandler = new EmailHandler()
     emailHandler.send(data).then(
         emailResponse => {
-            console.log(emailResponse)
-            // res.setHeader('Content-Type', 'application/json');
+            res.setHeader('Content-Type', 'application/json');
+            res.json({
+                msg: emailResponse
+            })
         }
     )
 
