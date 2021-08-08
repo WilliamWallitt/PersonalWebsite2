@@ -24,6 +24,14 @@ class EmailHandler {
     }
 }
 
+router.get("/api/contact", (req, res) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    res.send(JSON.stringify({
+        info: "hi there"
+    }))
+})
 
 router.post('/api/contact', (req, res) => {
 
