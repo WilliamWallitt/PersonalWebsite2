@@ -55,7 +55,7 @@ export default function ContactComponent() {
 
     async function onSubmit() {
         // submit details to /contact/
-        let data = await fetch("/api/contact", {
+        let data = await fetch("/contact", {
             method: "POST",
             mode: "same-origin",
             headers: {

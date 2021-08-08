@@ -9,16 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 app.use(express.static(buildPath));
-// app.use(require("./API"))
-
-
-app.get('/api/', async (req, res) => {
-
-    res.send(JSON.stringify({
-        hi: "there"
-    }))
-
-})
+app.use(require("./API"))
 
 
 app.listen(PORT, () => {
