@@ -31,7 +31,7 @@ router.post('/api/contact', (req, res) => {
     let emailHandler = new EmailHandler()
     emailHandler.send(data).then(
         emailResponse => {
-            res.setHeader('Content-Type', 'application/json');
+            // res.setHeader('Content-Type', 'application/json');
             res.send(JSON.stringify({ info: emailResponse}));
         }
     )
