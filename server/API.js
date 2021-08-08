@@ -24,14 +24,6 @@ class EmailHandler {
     }
 }
 
-router.get("/api/contact", (req, res) => {
-    res.append('Access-Control-Allow-Origin', ['*']);
-    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.append('Access-Control-Allow-Headers', 'Content-Type');
-    res.send(JSON.stringify({
-        info: "hi there"
-    }))
-})
 
 router.post('/api/contact', (req, res) => {
 
@@ -39,8 +31,8 @@ router.post('/api/contact', (req, res) => {
     let emailHandler = new EmailHandler()
     emailHandler.send(data).then(
         emailResponse => {
+            console.log(emailResponse)
             // res.setHeader('Content-Type', 'application/json');
-            res.send(JSON.stringify({ info: emailResponse}));
         }
     )
 
