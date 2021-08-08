@@ -25,7 +25,7 @@ class EmailHandler {
 }
 
 
-router.get('/contact', (req, res, next) => {
+router.get('/api/contact', (req, res, next) => {
 
     // let data = req.body
     // let emailHandler = new EmailHandler()
