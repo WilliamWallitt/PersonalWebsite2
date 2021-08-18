@@ -6,12 +6,15 @@ import Button from "react-bootstrap/Button";
 import TagComponent from "../GithubPage/TagComponent";
 import ButtonComponent from "../Button/Buttons";
 import Col from "react-bootstrap/Col";
+import mobileBackgroundImage from "../../Assets/mobileHomePage.png";
 
 let image_styling = null
 
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
-        backgroundColor: "black",
+        backgroundImage: "url(" + mobileBackgroundImage + ")",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         height: "100vh",
         width: "100vw",

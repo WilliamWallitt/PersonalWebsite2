@@ -9,16 +9,19 @@ import gameOfLife from "../../Assets/gameOfLife.PNG"
 import astarproject from "../../Assets/ASTAR.PNG"
 import yelpCampProject from "../../Assets/YelpCamp.png"
 import musicProject from "../../Assets/PATAPAPCLONE.png"
+import mobileBackgroundImage from "../../Assets/mobileHomePage.png";
 
 
 let image_styling = null;
 
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
+        // backgroundImage: "url(" + mobileBackgroundImage + ")",
         backgroundColor: "black",
         height: "200vh",
         width: "100vw",
         backgroundSize: "cover",
+        backgroundPosition: "center, center",
         backgroundAttachment: "fixed"
 
     }

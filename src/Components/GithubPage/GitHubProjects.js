@@ -3,6 +3,7 @@ import {Button, Card, Col, Container, ListGroup, Row} from "react-bootstrap";
 import TagComponent from "./TagComponent";
 import backgroundImage from "../../Assets/homePage2.jpg"
 import ButtonComponent from "../Button/Buttons";
+import mobileBackgroundImage from "../../Assets/mobileHomePage.png";
 
 let image_styling = null
 
@@ -10,9 +11,11 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
     image_styling = {
 
         backgroundColor: "black",
-        backgroundSize: "cover",
+        height: "auto",
         width: "100vw",
-        height: "500vh",
+        backgroundPosition: "top center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         backgroundAttachment: "fixed"
 
     }

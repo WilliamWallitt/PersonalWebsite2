@@ -16,14 +16,27 @@ export default function Project(props) {
             </Card.Title>
 
             <Link to={props.data.linkTo}>
-                <CardImg
-                     src={props.data.image}
-                     style={{
-                         width: '100%',
-                         // maxWidth: "100%",
-                         backgroundSize: "cover"
-                     }}
-                />
+                {window.innerWidth < 600 ?
+
+                    <CardImg
+                        src={props.data.image}
+                        style={{
+                            width: '100%',
+                            backgroundSize: "cover"
+                        }}
+                    /> :
+
+                    <CardImg
+                        src={props.data.image}
+                        style={{
+                            width: '50vw',
+                            // maxWidth: "100%",
+                            height: '50vh',
+                            backgroundSize: "cover",
+                            objectFit: "contain"
+                        }}
+                    />
+                }
             </Link>
 
             <Card.Text>

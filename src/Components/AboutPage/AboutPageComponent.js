@@ -7,6 +7,7 @@ import AboutButtonComponent from "./AboutButton";
 import Col from "react-bootstrap/Col";
 import spaceImage from "../../Assets/explorationImage.jpg"
 import ButtonComponent from "../Button/Buttons";
+import mobileBackgroundImage from "../../Assets/mobileHomePage.png";
 
 const currentLanguages = ["Javascript", "Python", "C#", "Java", "Golang", "DB's", "SQL", "CSS", "HTML", "Shopify"]
 const skills = [
@@ -27,11 +28,13 @@ let image_styling = null
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
         backgroundColor: "black",
-        height: "400vh",
+        // backgroundImage: "url(" + mobileBackgroundImage + ")",
+        backgroundPosition: "center, center",
+        backgroundRepeat: "no-repeat",
+        height: "600vw",
         width: "100vw",
-        backgroundSize: "cover",
+        // backgroundSize: "cover",
         backgroundAttachment: "fixed"
-
     }
 } else {
     image_styling = {

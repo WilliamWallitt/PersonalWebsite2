@@ -1,6 +1,7 @@
 import React from "react";
 import {Card, Container, Row} from "react-bootstrap";
 import backgroundImage from "../../Assets/homePage2.jpg"
+import mobileBackgroundImage from "../../Assets/mobileHomePage.png"
 import ButtonComponent from "../Button/Buttons";
 import {Link} from "react-router-dom";
 import TagComponent from "../GithubPage/TagComponent";
@@ -14,9 +15,12 @@ let image_styling = null
 
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
-        backgroundColor: "black",
+        // backgroundColor: "black",
+        backgroundImage: "url(" + mobileBackgroundImage + ")",
+        backgroundPosition: "left, left",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "100vh",
+        height: "90vh",
         width: "100vw",
         backgroundAttachment: "fixed"
 
@@ -58,7 +62,7 @@ export default function HomePageComponent() {
                     {/*    <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" alt="_" style={{width: "25px", height: "25px"}}/>*/}
                     {/*</h1>*/}
 
-                    <h1 className="p-5 h3 fw-bold fst-italic" data-heading="" id="h1">
+                    <h1 className="p-5 fw-bold fst-italic" data-heading="" id="h1">
                         HI, I'M WILL, AND I'M A FULL-STACK WEB DEVELOPER &nbsp;
                         <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" alt="_" style={{width: "25px", height: "25px"}}/>
                     </h1>
