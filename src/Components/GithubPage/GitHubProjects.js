@@ -10,7 +10,9 @@ let image_styling = null
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
 
-        backgroundColor: "black",
+        // backgroundColor: "black",
+        color: "#69B0CD",
+        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
         height: "auto",
         width: "100vw",
         backgroundPosition: "top center",
@@ -23,7 +25,9 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 
         image_styling = {
 
-            backgroundImage: "url(" + backgroundImage + ")",
+            // backgroundImage: "url(" + backgroundImage + ")",
+            color: "#69B0CD",
+            background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
             // backgroundColor: "white",
             height: "auto",
             width: "100vw",
@@ -69,7 +73,7 @@ export default class GitHubProjects extends React.Component {
                 })
 
             } catch (e) {
-                console.log(e)
+                throw e;
             }
 
         }
@@ -111,11 +115,11 @@ export default class GitHubProjects extends React.Component {
 
                     <Container variant="flush" className={window.innerWidth > 650 ? "mx-auto my-5 w-75" : "mx-auto my-5 w-100" }>
                         {this.state.data.map((value, index) => (
-                            <div key={index}  style={{backgroundColor: "transparent"}} className="my-2">
+                            <div key={index}  style={{backgroundColor: "rgb(0, 0, 0, 0.25"}} className="my-2 py-2 rounded shadow-lg">
 
                                 <Row className="my-3">
                                     <Col className="text-white">
-                                        <TagComponent name={value.name} backgroundColor="#292b2c"/>
+                                        <TagComponent name={value.name} backgroundColor="white"/>
                                     </Col>
                                 </Row>
 

@@ -27,7 +27,9 @@ let image_styling = null
 
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
-        backgroundColor: "black",
+        // backgroundColor: "black",
+        color: "#69B0CD",
+        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
         // backgroundImage: "url(" + mobileBackgroundImage + ")",
         backgroundPosition: "center, center",
         backgroundRepeat: "no-repeat",
@@ -39,7 +41,9 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 } else {
     image_styling = {
 
-        backgroundImage: "url(" + backgroundImage + ")",
+        // backgroundImage: "url(" + backgroundImage + ")",
+        color: "#69B0CD",
+        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
         // backgroundColor: "white",
         height: "300vh",
         width: "100vw",
@@ -62,27 +66,28 @@ export default function AboutPageComponent() {
             <Card className={window.innerWidth > 700 ? "d-flex align-items-center justify-content-center text-start mx-auto w-75" :
             "d-flex align-items-center justify-content-center text-start w-100"} style={{
                 // backgroundColor: `rgb(255, 255, 255, 0.94)`,
-                backgroundColor: "transparent",
+                // backgroundColor: "transparent",
+                backgroundColor: "rgb(0, 0, 0, 0.25)",
+                // color: "#570861",
                 color: "white",
                 transform: 'translate(0%, 5%)',
             }}>
 
                 <Card.Title className="p-2">
 
-                    <h1 className="m-5 h3 fw-bold fst-italic p-2 text-center text-white">
+                    <h1 className="m-2 h3 fw-bold fst-italic p-2 text-center text-white">
                         <TagComponent name="About me" fontSize="h1"/>
                     </h1>
 
-                    <p style={{
-                        backgroundImage: `url(${'https://media.giphy.com/media/RetcDrOQFZRR3e4R8z/giphy.gif'})`,
-                        backgroundColor: `rgb(255, 255, 255, 0.94)`,
-                        color: "#570861",
-                    }} className="w-75 mx-auto text-center p-2 rounded">
-                        I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
-                    </p>
-
-                    <Row className="w-75 mx-auto">
-                        <Card className="d-flex flex-row flex-wrap">
+                    <Row className="w-100 mx-auto">
+                        <Card className="d-flex flex-row flex-wrap p-2">
+                            <p style={{
+                                backgroundImage: `url(${'https://media.giphy.com/media/RetcDrOQFZRR3e4R8z/giphy.gif'})`,
+                                backgroundColor: `rgb(255, 255, 255, 0.94)`,
+                                color: "#570861",
+                            }} className="w-75 mx-auto text-center p-2 rounded">
+                                I'm a full-stack software engineer who has just finished at Exeter University with First Class Honours.
+                            </p>
                             <Card.Img src={spaceImage} style={{backgroundSize: "contain", backgroundPosition: "center", width: "100%",
                             height: "auto", alignSelf: "flex-start"}}/>
                             <Card.Text>
@@ -97,7 +102,7 @@ export default function AboutPageComponent() {
 
                     <Row style={{
                         backgroundColor: `rgb(41, 43, 41, 0.8)`
-                    }} className="mt-2">
+                    }} className="mt-2 m-0 p-1">
 
                         <p className="lead mt-3">
                             I had spent much of the last three years (when I started programming) teaching myself both Front-End and Back-End development using <code> <AboutButtonComponent name="Javascript"/></code>.

@@ -17,8 +17,8 @@ let image_styling = null;
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
         // backgroundImage: "url(" + mobileBackgroundImage + ")",
-        backgroundColor: "black",
-        height: "200vh",
+        color: "#69B0CD",
+        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",        height: "200vh",
         width: "100vw",
         backgroundSize: "cover",
         backgroundPosition: "center, center",
@@ -28,8 +28,10 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
 } else {
     image_styling = {
 
-        backgroundImage: "url(" + backgroundImage + ")",
+        // backgroundImage: "url(" + backgroundImage + ")",
         // backgroundColor: "white",
+        color: "#69B0CD",
+        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
         height: "200vh",
         width: "100vw",
         backgroundPosition: "center, center",
@@ -117,7 +119,6 @@ export default function ProjectsComponent() {
             <Container fluid style={{backgroundColor: "#eeff1f",
                 color: "#183153", transform: 'translate(0%, 5%)', width: "90vw"}}
                        className="mx-auto">
-
                 <Row>
                     <h1 className="h3 fw-bold fst-italic p-2 text-center">Projects</h1>
                 </Row>

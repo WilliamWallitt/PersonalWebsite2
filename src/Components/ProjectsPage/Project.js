@@ -29,7 +29,7 @@ export default function Project(props) {
                     <CardImg
                         src={props.data.image}
                         style={{
-                            width: '50vw',
+                            width: '100%',
                             // maxWidth: "100%",
                             height: '50vh',
                             backgroundSize: "cover",
@@ -41,7 +41,7 @@ export default function Project(props) {
 
             <Card.Text>
                 <Row>
-                    <p className="lead">{props.data.description}</p>
+                    <p className="lead bg-dark text-white p-2 m-2">{props.data.description}</p>
                 </Row>
                 <Row>
                     <h1 className="fst-italic lead">
