@@ -80,16 +80,24 @@ export default function ContactComponent() {
     function renderNameAndEmailHandler() {
         return (
             <Row className={window.innerWidth > 600 ?
-                "rounded rounded-circle border border-dark shadow-lg p-5 mx-auto d-flex flex-row w-50" :
-                "rounded rounded-circle border border-dark shadow-lg p-5 mx-auto d-flex flex-row"
+                "shadow-lg p-5 mx-auto d-flex flex-row w-50" :
+                "shadow-lg p-5 mx-auto d-flex flex-row"
             }
-                 style={{backgroundColor: "rgb(0,0,0,0.7)"}}>                <Form.Group className="mb-3" controlId="name">
-                    <Form.Label><TagComponent name="Name" backgroundColor="white"/></Form.Label>
+                 >                <Form.Group className="mb-3" controlId="name">
+                    <Form.Label>
+                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                            Name
+                        </h1>
+                    </Form.Label>
                     <Form.Control key={"name"} type="text" placeholder={userData.name === "" ? "John Smith" : userData.name} onChange={updateFieldHandler.bind(this, "name")}/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="email">
-                    <Form.Label><TagComponent name="Email address" backgroundColor="white"/></Form.Label>
+                    <Form.Label>
+                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                            Email address
+                        </h1>
+                    </Form.Label>
                     <Form.Control key={"email"} type="email" placeholder={userData.email === "" ? "user@gmail.com" : userData.email} onChange={updateFieldHandler.bind(this, "email")}/>
                 </Form.Group>
 
@@ -108,19 +116,27 @@ export default function ContactComponent() {
     function renderNumberAndMessageHandler() {
         return (
             <Row className={window.innerWidth > 600 ?
-                "rounded rounded-circle border border-dark shadow-lg p-5 mx-auto d-flex flex-row w-50" :
-                "rounded rounded-circle border border-dark shadow-lg p-5 mx-auto d-flex flex-row"
+                "shadow-lg p-5 mx-auto d-flex flex-row w-50" :
+                "border border-dark shadow-lg p-5 mx-auto d-flex flex-row"
             }
-                 style={{backgroundColor: "rgb(0,0,0,0.7)"}}>
+                 >
                 <Form.Group className="mb-3" controlId="number">
-                    <Form.Label><TagComponent name="Contact number" backgroundColor="white"/></Form.Label>
+                    <Form.Label>
+                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                            Contact Number
+                        </h1>
+                    </Form.Label>
                     <Form.Control key={"number"} type="text" onChange={updateFieldHandler.bind(this, "number")}
                                   placeholder={userData.number === "" ? "07713190023" : userData.number} />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="message">
 
-                    <Form.Label><TagComponent name="Message" backgroundColor="white"/></Form.Label>
+                    <Form.Label>
+                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                            Message
+                        </h1>
+                    </Form.Label>
                     <Form.Control as="textarea" key={"message"} rows={3} onChange={updateFieldHandler.bind(this, "message")}
                                   placeholder={userData.message === "" ? "Please enter a message here" : userData.message}/>
                 </Form.Group>

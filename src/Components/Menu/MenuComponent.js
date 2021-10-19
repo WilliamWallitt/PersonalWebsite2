@@ -69,14 +69,6 @@ export default function MenuComponent() {
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
-                                <Link to="/spotify" className="text-decoration-none text-dark">
-                                    {/*<ButtonComponent name="Spotify" backgroundColor="transparent"/>*/}
-                                    <h1 style={{fontSize: "1.3rem"}}>
-                                        Spotify
-                                    </h1>
-                                </Link>
-                            </NavLink>
-                            <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/contact" className="text-decoration-none text-dark">
                                     {/*<ButtonComponent name="Contact" backgroundColor="transparent"/>*/}
                                     <h1 style={{fontSize: "1.3rem"}}>
@@ -91,9 +83,6 @@ export default function MenuComponent() {
                 </Navbar>
 
                 <Switch>
-                    <Route path="/spotify">
-                        <SpotifyHomePage/>
-                    </Route>
                     <Route path="/projects">
                         <ProjectsComponent/>
                     </Route>
