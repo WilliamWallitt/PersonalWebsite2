@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Container, Row} from "react-bootstrap";
+import {Card, Container, Row, Col, Image} from "react-bootstrap";
 import ButtonComponent from "../Button/Buttons";
 import {Link} from "react-router-dom";
 import TagComponent from "../GithubPage/TagComponent";
@@ -7,6 +7,7 @@ import "./Title.scss"
 import "./cloud.css"
 import {D_GGX} from "three/examples/jsm/renderers/nodes/functions/BSDFs";
 import VoxelDog from "./Model/dog";
+import avatar from "../../Assets/willavatar.jfif"
 
 //  #87CEEB skyblue
 // #183153 navy blue
@@ -24,7 +25,7 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
         backgroundPosition: "left, left",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "100vh",
+        height: "150vh",
         width: "100vw",
         backgroundAttachment: "fixed"
 
@@ -36,7 +37,7 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
         //     // backgroundColor: "white",
         color: "#69B0CD",
         background: "rgb(240, 231, 219)",
-        height: "100vh",
+        height: "150vh",
         width: "100vw",
         backgroundPosition: "center, center",
         backgroundRepeat: "no-repeat",
@@ -60,28 +61,37 @@ export default function HomePageComponent() {
                 <Container className="d-flex text-center align-items-center justify-content-center" fluid>
 
                     {/* border border-dark border-5*/}
-                    <Card className={window.innerWidth > 600 ? "text-center w-50 shadow shadow-lg" : "text-center w-100 shadow shadow-lg" } style={{
+                    <Card className={window.innerWidth > 600 ? "text-center w-25 border-0" : "text-center w-100 border-0" } style={{
                         backgroundColor: `rgb(240, 231, 219)`,
                         // backgroundColor: "rgb(255, 255, 255, 0.65)",
                         // color: "#570861"
                     }}>
                         <Card.Title>
 
-
-                            <h1 className="p-5 fw-bold fst-italic mt-5" data-heading="" id="lead">
-                                <TagComponent name="Hello, I'm a full-stack web developer based in London &nbsp;" backgroundColor="rgb(255, 255, 255, 0.7)">
+                            <h1 className="p-5 fw-bold fst-italic mt-5" data-heading="">
+                                <TagComponent name="Hello, I'm a full-stack web developer based in London &nbsp;" backgroundColor="rgb(255, 255, 255, 0.3)" fontSize="1.1rem">
                                     <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" className="" alt="_" style={{width: "25px", height: "25px"}}/>
                                 </TagComponent>
 
                             </h1>
 
-                            <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3">
-                                William De Stanford
-                            </h1>
+                            <Row>
 
-                            <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start"}} className="mx-3">
-                                Web programmer
-                            </p>
+                                <Col className="col-9">
+                                    <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3">
+                                        William De Stanford
+                                    </h1>
+
+                                    <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start"}} className="mx-3">
+                                        Web programmer
+                                    </p>
+                                </Col>
+                                <Col>
+                                    <Image src={avatar} roundedCircle style={{border: "solid", borderColor:"white", borderWidth: "2px"}}/>
+                                </Col>
+
+                            </Row>
+
                             {/*<Link to="/about" className="text-decoration-none text-white">*/}
                             {/*    <ButtonComponent name="about me &#10140;" backgroundColor="#87CEEB"/>*/}
                             {/*</Link>*/}
@@ -91,6 +101,41 @@ export default function HomePageComponent() {
                                     <ButtonComponent name="see all projects &#10140;" backgroundColor="#87CEEB"/>
                                 </div>
                             </Link>
+
+                            <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                                Bio
+                            </h1>
+
+                            <Row className="my-2">
+                                <Col>
+                                    <p style={{fontWeight: "normal", fontSize: "1rem", textAlign: "start"}} className="mx-3">
+                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>1997&nbsp;&nbsp;&nbsp;</div>  Born in London
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="my-2">
+                                <Col>
+                                    <p style={{fontWeight: "normal", fontSize: "1rem", textAlign: "start"}} className="mx-3">
+                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>2015&nbsp;&nbsp;&nbsp;</div>  Finished my Alevels at Oundle School with A,A,A in Maths, Phyiscs and Religious Studies
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="my-2">
+                                <Col>
+                                    <p style={{fontWeight: "normal", fontSize: "1rem", textAlign: "start"}} className="mx-3">
+                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>2021&nbsp;&nbsp;&nbsp;</div>   Graduated the University of Exeter with 1st class honours (78%)
+                                    </p>
+                                </Col>
+                            </Row>
+                            <Row className="my-2">
+                                <Col>
+                                    <p style={{fontWeight: "normal", fontSize: "1rem", textAlign: "start"}} className="mx-3">
+                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>2021 to present&nbsp;&nbsp;&nbsp;</div> Works at Discover.ai as a Software Engineer
+                                    </p>
+                                </Col>
+                            </Row>
+
+
 
                         </Card.Title>
 
