@@ -10,15 +10,15 @@ export default function TagComponent(props) {
         props.backgroundColor === undefined ?
 
             <div className="tag bg-white">
-                <h1 data-heading="" id="menu" className={props.fontSize !== null ? props.fontSize: "lead"}>
+                <p data-heading="" id="menu">
                     {props.name}
-                </h1>
+                </p>
             </div> :
 
-            <div className="tag" style={{backgroundColor: props.backgroundColor}}>
-                <h1 data-heading="" id="menu" className={props.fontSize !== null ? props.fontSize: "lead"}>
+            <div className="tag" style={{backgroundColor: props.backgroundColor, color: props.color, fontSize: props.fontSize}}>
+                <p data-heading="" id="menu">
                     {props.name}
-                </h1>
+                </p>
             </div>
 
     )

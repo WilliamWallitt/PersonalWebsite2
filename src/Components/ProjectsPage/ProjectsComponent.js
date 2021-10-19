@@ -18,7 +18,8 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
     image_styling = {
         // backgroundImage: "url(" + mobileBackgroundImage + ")",
         color: "#69B0CD",
-        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",        height: "200vh",
+        background: "rgb(240, 231, 219)",
+        height: "200vh",
         width: "100vw",
         backgroundSize: "cover",
         backgroundPosition: "center, center",
@@ -31,7 +32,7 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
         // backgroundImage: "url(" + backgroundImage + ")",
         // backgroundColor: "white",
         color: "#69B0CD",
-        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
+        background: "rgb(240, 231, 219)",
         height: "200vh",
         width: "100vw",
         backgroundPosition: "center, center",
@@ -116,15 +117,19 @@ export default function ProjectsComponent() {
         <Container fluid style={{width: "100vw", height: "200vh", backgroundColor: "white", ...image_styling
         }}>
 
-            <Container fluid style={{backgroundColor: "#eeff1f",
-                color: "#183153", transform: 'translate(0%, 5%)', width: "90vw"}}
+            <Container fluid style={{
+                transform: 'translate(0%, 5%)', width: "90vw"}}
                        className="mx-auto">
                 <Row>
-                    <h1 className="h3 fw-bold fst-italic p-2 text-center">Projects</h1>
+                    {/*<h1 className="h3 fw-bold fst-italic p-2 text-center">Projects</h1>*/}
+                    <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3 text-center p-2">
+                        Projects
+                    </h1>
+
                 </Row>
                 <Row>
 
-                    <Carousel className="shadow-lg" style={{backgroundColor: "#183153"}}>
+                    <Carousel>
                         {projects.map(project => (
                             <Carousel.Item>
                                 <Project data={project}/>

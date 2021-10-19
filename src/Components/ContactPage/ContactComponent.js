@@ -10,7 +10,7 @@ let image_styling = null
 if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     image_styling = {
         color: "#69B0CD",
-        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
+        background: "rgb(240, 231, 219)",
         backgroundPosition: "center, center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -23,7 +23,7 @@ if( /Android|webOS|iPhone|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.te
     image_styling = {
 
         color: "#69B0CD",
-        background: "linear-gradient(to bottom, #87CEEB 0%, #78BFDC 100%)",
+        background: "rgb(240, 231, 219)",
         // backgroundColor: "white",
         height: "100vh",
         width: "100vw",

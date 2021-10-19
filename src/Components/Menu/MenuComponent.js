@@ -25,50 +25,68 @@ export default function MenuComponent() {
 
         <Router>
             <div>
-                <Navbar expand="md" sticky className="border border-dark shadow-lg sticky-top bg-white">
+                <Navbar expand="md" sticky className="sticky-top" style={{backgroundColor: "rgb(240, 231, 219)"}}>
 
-                    <NavLink className="h6 text-start">
-                        <Link to="/">
-                            <img src={image} style={{maxHeight: "100px", maxWidth: "70px"}}/>
-                        </Link>
-                    </NavLink>
+                    {/*<NavLink className="h6 text-start">*/}
+                    {/*    <Link to="/">*/}
+                    {/*        <img src={image} style={{maxHeight: "100px", maxWidth: "70px"}}/>*/}
+                    {/*    </Link>*/}
+                    {/*</NavLink>*/}
 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2 border-dark"/>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/" className="text-decoration-none text-dark">
-                                    <ButtonComponent name="Home" backgroundColor="white"/>
+                                    {/*<ButtonComponent name="Home" backgroundColor="transparent"/>*/}
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        Home
+                                    </h1>
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/about" className="text-decoration-none text-dark">
-                                    <ButtonComponent name="About" backgroundColor="white"/>
+                                    {/*<ButtonComponent name="About" backgroundColor="transparent"/>*/}
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        About
+                                    </h1>
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/github" className="text-decoration-none text-dark">
-                                    <ButtonComponent name="Github" backgroundColor="white"/>
+                                    {/*<ButtonComponent name="Github" backgroundColor="transparent"/>*/}
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        Github
+                                    </h1>
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/projects" className="text-decoration-none text-dark">
-                                    <ButtonComponent name="Projects" backgroundColor="white"/>
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        Projects
+                                    </h1>
+                                    {/*<ButtonComponent name="Projects" backgroundColor="transparent"/>*/}
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/spotify" className="text-decoration-none text-dark">
-                                    <ButtonComponent name="Spotify" backgroundColor="white"/>
+                                    {/*<ButtonComponent name="Spotify" backgroundColor="transparent"/>*/}
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        Spotify
+                                    </h1>
                                 </Link>
                             </NavLink>
+                            <NavLink className="h6 text-start p-1 m-1">
+                                <Link to="/contact" className="text-decoration-none text-dark">
+                                    {/*<ButtonComponent name="Contact" backgroundColor="transparent"/>*/}
+                                    <h1 style={{fontSize: "1.5rem"}}>
+                                        Contact
+                                    </h1>
+                                </Link>
+                            </NavLink>
+
                         </Nav>
                     </Navbar.Collapse>
-
-                    <NavLink className="text-start p-1 m-1">
-                        <Link to="/contact" className="text-decoration-none text-dark">
-                            <TagComponent name="Contact" backgroundColor="#87CEEB"/>
-                        </Link>
-                    </NavLink>
 
                 </Navbar>
 

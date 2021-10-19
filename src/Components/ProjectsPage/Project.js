@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Card, CardImg, Container, Row} from "react-bootstrap";
+import {Card, CardImg, Container, Image, Row} from "react-bootstrap";
 import TagComponent from "../GithubPage/TagComponent";
 
 export default function Project(props) {
@@ -8,17 +8,18 @@ export default function Project(props) {
     return (
 
 
-        <Card className="m-2">
+        <Card className={window.innerWidth < 600  ? "m-2 bg-transparent border-0 w-100 mx-auto" : "m-2 bg-transparent border-0 w-50 mx-auto"}>
             <Card.Title className="m-2 ">
-                <h1 className="fst-italic">
-                    <TagComponent name={props.data.name} fontSize="h3"/>
+
+                <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3 text-center p-2">
+                    {props.data.name}
                 </h1>
             </Card.Title>
 
             <Link to={props.data.linkTo}>
                 {window.innerWidth < 600 ?
 
-                    <CardImg
+                    <Image
                         src={props.data.image}
                         style={{
                             width: '100%',
@@ -31,7 +32,7 @@ export default function Project(props) {
                         style={{
                             width: '100%',
                             // maxWidth: "100%",
-                            height: '50vh',
+                            // height: '50vh',
                             backgroundSize: "cover",
                             objectFit: "contain"
                         }}
@@ -41,24 +42,30 @@ export default function Project(props) {
 
             <Card.Text>
                 <Row>
-                    <p className="lead bg-dark text-white p-2 m-2">{props.data.description}</p>
+                    <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start"}} className="mx-3 my-2">
+                        {props.data.description}
+                    </p>
                 </Row>
                 <Row>
-                    <h1 className="fst-italic lead">
-                        <TagComponent name="Coding languages / techniques used" fontSize="h6" backgroundColor="#570861"/>
+
+                    <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3 text-center p-2">
+                        Coding languages / techniques used
                     </h1>
                     <Container fluid className="d-flex justify-content-center flex-wrap w-100 mb-5 p-2">
                         {props.data.tags.map(tag => (
                             <div style={{
-                                backgroundColor: "#eeff1f",
-                                color: "#570861"
+                                // backgroundColor: "#eeff1f",
+                                // color: "#570861"
                             }}>
-                                <TagComponent name={tag} fontSize="h6"/>
+                                <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start", backgroundColor: "#c6f6d5"}}
+                                   className="mx-3 my-2 p-1">
+                                    {tag}
+                                </p>
                             </div>
                         ))}
                     </Container>
                 </Row>
-                <Row style={{backgroundColor: "#570861"}}>
+                <Row>
                     <h1>.</h1>
                 </Row>
 

@@ -11,7 +11,7 @@ const queryString = require("query-string")
 
 const image_styling = {
 
-    backgroundImage: "url(" + WallpaperSpotify + ")",
+    background: "rgb(240, 231, 219)",
     height: "95vh",
     width: "100vw",
     backgroundPosition: "center",
@@ -189,7 +189,7 @@ class SpotifyHomePage extends React.Component {
 
                 <Container className="d-flex text-center align-items-center justify-content-center" fluid style={{width: "100vw", height: "100vh", fontFamily: "", ...image_styling}}>
 
-                    <Button variant="outline-none" className="bg-white text-dark p-2 m-0"  href={redirect} onClick={this.auth_handler()}>
+                    <Button variant="outline-none" className="text-dark p-2 m-0"  href={redirect} onClick={this.auth_handler()}>
                         <ButtonComponent name="Log into Spotify"/>
                     </Button>
 

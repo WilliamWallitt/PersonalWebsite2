@@ -19,11 +19,11 @@ export default function LanguageComponent(props) {
         showInfo === false ?
             <div onClick={onClickHandler}><ButtonComponent name={props.language}/></div> :
             props.skills.length > 0 ?
-            <ListGroup variant="flush" className="bg-transparent d-flex flex-wrap" horizontal>
+            <ListGroup variant="flush" className="bg-transparent d-flex flex-wrap my-3" horizontal>
                 <div onClick={onClickHandler}><ButtonComponent name={props.language}/></div> :
                 {props.skills.map(skill => {
-                    return <div onClick={onClickHandler} style={{backgroundColor: "#eeff1f"}} className="text-white">
-                        <TagComponent name={skill} backgroundColor="#570861"/>
+                    return <div onClick={onClickHandler} className="text-white">
+                        <TagComponent name={skill} backgroundColor="white"/>
                     </div>
                 })}
             </ListGroup> : <div onClick={onClickHandler}><ButtonComponent name={props.language}/></div>
