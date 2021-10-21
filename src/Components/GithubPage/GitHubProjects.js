@@ -85,8 +85,8 @@ export default class GitHubProjects extends React.Component {
 
         if (this.state.data === null) {
             return (
-                <Container className="mt-5 text-center">
-                    <img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="gif" style={{width: "80vw"}}/>
+                <Container className="mt-5 text-center bg-transparent">
+                    <img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" alt="gif" style={{width: "80vw", background: "transparent"}}/>
                 </Container>
             )
         } else {
@@ -115,15 +115,13 @@ export default class GitHubProjects extends React.Component {
                     <Container variant="flush" className={window.innerWidth > 650 ? "mx-auto my-5 w-100" : "mx-auto my-5 w-100" }>
                         <Col>
                             {this.state.data.map((value, index) => (
-                                <Row key={index} className="my-2 py-2 w-100 rounded col-4 mx-auto">
+                                <Row key={index} className={window.innerWidth > 600 ? "my-2 py-2 w-50 rounded col-4 mx-auto" : "my-2 py-2 w-100 rounded col-4 mx-auto"}>
 
                                     <Row className="my-3">
                                         <Col className="text-white">
-                                            <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3">
+                                            <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.2rem"}} className="mx-3">
                                                 {value.name}
                                             </h1>
-
-                                            {/*<TagComponent name={value.name} backgroundColor="white"/>*/}
                                         </Col>
                                     </Row>
 
@@ -131,32 +129,16 @@ export default class GitHubProjects extends React.Component {
                                     <Row className="mx-2">
                                         <Col className="text-white">
                                             <p style={{fontWeight: "bolder", fontSize: "1rem", textAlign: "start", backgroundColor: "#c6f6d5"}} className="mx-3 my-2 p-1">
-                                                Created at:
+                                                Created at:  &nbsp; &nbsp; &nbsp; {value.created_at.slice(0, 10)}
                                             </p>
-
-                                            {/*<TagComponent name="Created at: &#10140;" backgroundColor="#87CEEB"/>*/}
-                                        </Col>
-                                        <Col>
-                                            <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start", backgroundColor: "white"}} className="mx-3 my-2">
-                                                {value.created_at.slice(0, 10)}
-                                            </p>
-                                            {/*<TagComponent name={value.created_at.slice(0, 10)} backgroundColor="#eeff1f"/>*/}
-
                                         </Col>
                                     </Row>
 
                                     {value.description !== null && <Row className="mx-2">
                                         <Col className="text-white">
                                             <p style={{fontWeight: "bolder", fontSize: "1rem", textAlign: "start", backgroundColor: "#c6f6d5"}} className="mx-3 my-2 p-1">
-                                                Description:
+                                                Description:&nbsp; &nbsp; &nbsp;{value.description}
                                             </p>
-                                            {/*<TagComponent name="Description &#10140;" backgroundColor="#87CEEB"/>*/}
-                                        </Col>
-                                        <Col>
-                                            <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start"}} className="mx-3 my-2">
-                                                {value.description}
-                                            </p>
-                                            {/*<TagComponent name={value.description} backgroundColor="#eeff1f"/>*/}
                                         </Col>
                                     </Row>
 
@@ -166,15 +148,8 @@ export default class GitHubProjects extends React.Component {
                                     <Row className="mx-2">
                                         <Col className="text-white">
                                             <p style={{fontWeight: "bolder", fontSize: "1rem", textAlign: "start", backgroundColor: "#c6f6d5"}} className="mx-3 my-2 p-1">
-                                                Coding languages:
+                                                Coding languages:&nbsp; &nbsp; &nbsp;{value.language}
                                             </p>
-                                            {/*<TagComponent name="Coding languages &#10140;" backgroundColor="#87CEEB"/>*/}
-                                        </Col>
-                                        <Col>
-                                            <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start"}} className="mx-3 my-2">
-                                                {value.language}
-                                            </p>
-                                            {/*<TagComponent name={value.language} backgroundColor="#eeff1f"/>*/}
                                         </Col>
                                     </Row>
 

@@ -53,7 +53,7 @@ export default function AboutPageComponent() {
 
         // <Container fluid style={{width: "100vw", height: "200vh", ...image_styling
         // }}>
-        <Container className="w-75" style={{...image_styling}}>
+        <Container className={window.innerWidth < 600 ? "w-100" : "w-25"} style={{...image_styling}}>
 
 
 
