@@ -54,21 +54,21 @@ export default function HomePageComponent() {
 
     return (
         <div style={{width: "100vw", height: "50vh", ...image_styling}}>
+
+
             <Row>
-                <VoxelDog/>
-            </Row>
-            <Row>
+
                 <Container className="d-flex text-center align-items-center justify-content-center" fluid>
 
-                    {/* border border-dark border-5*/}
-                    <Card className={window.innerWidth > 600 ? "text-center w-25 border-0" : "text-center w-100 border-0" } style={{
+
+                    <Card className={window.innerWidth > 920 ? "text-center w-25 border-0" : window.innerWidth < 600 ? "text-center w-100 border-0" : "text-center w-50 border-0" } style={{
                         backgroundColor: `rgb(240, 231, 219)`,
                         // backgroundColor: "rgb(255, 255, 255, 0.65)",
                         // color: "#570861"
                     }}>
                         <Card.Title>
 
-                            <h1 className="p-5 fw-bold fst-italic mt-5" data-heading="">
+                            <h1 className="p-5 fw-bold fst-italic" data-heading="">
                                 <TagComponent name="Hello, I'm a full-stack web developer based in London &nbsp;" backgroundColor="rgb(255, 255, 255, 0.3)" fontSize="1.1rem">
                                     <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" className="" alt="_" style={{width: "25px", height: "25px"}}/>
                                 </TagComponent>
@@ -90,11 +90,25 @@ export default function HomePageComponent() {
                                     <Image src={avatar} roundedCircle style={{border: "solid", borderColor:"white", borderWidth: "2px"}}/>
                                 </Col>
 
-                            </Row>
 
-                            {/*<Link to="/about" className="text-decoration-none text-white">*/}
-                            {/*    <ButtonComponent name="about me &#10140;" backgroundColor="#87CEEB"/>*/}
-                            {/*</Link>*/}
+                            </Row>
+                        </Card.Title>
+                    </Card>
+                </Container>
+            </Row>
+            <Row>
+                <VoxelDog/>
+            </Row>
+            <Row>
+                <Container className="d-flex text-center align-items-center justify-content-center" fluid>
+
+                    {/* border border-dark border-5*/}
+                    <Card className={window.innerWidth > 600 ? "text-center w-25 border-0" : "text-center w-100 border-0" } style={{
+                        backgroundColor: `rgb(240, 231, 219)`,
+                        // backgroundColor: "rgb(255, 255, 255, 0.65)",
+                        // color: "#570861"
+                    }}>
+                        <Card.Title>
 
                             <Link to="/projects">
                                 <div className="mt-4">
@@ -116,7 +130,7 @@ export default function HomePageComponent() {
                             <Row className="my-2">
                                 <Col>
                                     <p style={{fontWeight: "normal", fontSize: "1rem", textAlign: "start"}} className="mx-3">
-                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>2015&nbsp;&nbsp;&nbsp;</div>  Finished my Alevels at Oundle School with A,A,A in Maths, Phyiscs and Religious Studies
+                                        <div style={{fontWeight: "bolder", display: "inline-block"}}>2015&nbsp;&nbsp;&nbsp;</div>  Finished Alevels at Oundle School with A,A,A in Maths, Phyiscs and Religious Studies
                                     </p>
                                 </Col>
                             </Row>
