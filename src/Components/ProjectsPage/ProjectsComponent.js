@@ -118,15 +118,8 @@ export default function ProjectsComponent() {
         }}>
 
             <Container fluid style={{
-                transform: 'translate(0%, 5%)', width: "90vw"}}
+                transform: 'translate(0%, 0%)', width: "90vw"}}
                        className="mx-auto">
-                <Row>
-                    {/*<h1 className="h3 fw-bold fst-italic p-2 text-center">Projects</h1>*/}
-                    <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem"}} className="mx-3 text-center p-2">
-                        Projects
-                    </h1>
-
-                </Row>
                 <Row>
 
                     <Carousel>

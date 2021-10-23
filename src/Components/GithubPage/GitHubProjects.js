@@ -106,7 +106,7 @@ export default class GitHubProjects extends React.Component {
                         <Card.Img variant="top" style={{height: "16vh", objectFit: "cover"}} src={this.state.data[0].owner.avatar_url}/>
                             <Card.Body>
                                 <Button variant="outline-none text-white" href={this.state.data[0].owner.html_url}>
-                                    <ButtonComponent name={this.state.data[0].owner.login} backgroundColor="white"/>
+                                    <ButtonComponent name={this.state.data[0].owner.login} backgroundColor="transparent"/>
                                 </Button>
                             </Card.Body>
                         </Card>

@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import TagComponent from "../GithubPage/TagComponent";
 import ButtonComponent from "../Button/Buttons";
 import "../HomePage/cloud.css"
+import "../Button/test_button.css"
 
 let image_styling = null
 
@@ -85,7 +86,7 @@ export default function ContactComponent() {
             }
                  >                <Form.Group className="mb-3" controlId="name">
                     <Form.Label>
-                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                        <h1 style={{textAlign: "center", fontSize: "1.66rem"}} className="test_button_large tmx-3">
                             Name
                         </h1>
                     </Form.Label>
@@ -94,7 +95,7 @@ export default function ContactComponent() {
 
                 <Form.Group className="mb-3" controlId="email">
                     <Form.Label>
-                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                        <h1 style={{textAlign: "center", fontSize: "1.66rem"}} className="test_button_large tmx-3">
                             Email address
                         </h1>
                     </Form.Label>
@@ -122,8 +123,8 @@ export default function ContactComponent() {
                  >
                 <Form.Group className="mb-3" controlId="number">
                     <Form.Label>
-                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
-                            Contact Number
+                        <h1 style={{textAlign: "center", fontSize: "1.66rem"}} className="test_button_large tmx-3">
+                            Contact number
                         </h1>
                     </Form.Label>
                     <Form.Control key={"number"} type="text" onChange={updateFieldHandler.bind(this, "number")}
@@ -133,7 +134,7 @@ export default function ContactComponent() {
                 <Form.Group className="mb-3" controlId="message">
 
                     <Form.Label>
-                        <h1 style={{fontWeight: "bold", textAlign: "start", fontSize: "1.66rem", textDecoration: "underline"}} className="mx-3">
+                        <h1 style={{textAlign: "center", fontSize: "1.66rem"}} className="test_button_large tmx-3">
                             Message
                         </h1>
                     </Form.Label>

@@ -5,9 +5,9 @@ import {Link} from "react-router-dom";
 import TagComponent from "../GithubPage/TagComponent";
 import "./Title.scss"
 import "./cloud.css"
-import {D_GGX} from "three/examples/jsm/renderers/nodes/functions/BSDFs";
 import VoxelDog from "./Model/dog";
 import avatar from "../../Assets/willavatar.jfif"
+import "../Button/test_button.css"
 
 //  #87CEEB skyblue
 // #183153 navy blue
@@ -69,7 +69,7 @@ export default function HomePageComponent() {
                         <Card.Title>
 
                             <h1 className="p-5 fw-bold fst-italic" data-heading="">
-                                <TagComponent name="Hello, I'm a full-stack web developer based in London &nbsp;" backgroundColor="rgb(255, 255, 255, 0.3)" fontSize="1.1rem">
+                                <TagComponent name="Hello, I'm a full-stack web developer based in London &nbsp;" backgroundColor="rgb(255, 255, 255, 0.3)" fontSize="16px">
                                     <img src="https://media.giphy.com/media/eNAsjO55tPbgaor7ma/giphy.gif" className="" alt="_" style={{width: "25px", height: "25px"}}/>
                                 </TagComponent>
 
@@ -112,7 +112,8 @@ export default function HomePageComponent() {
 
                             <Link to="/projects">
                                 <div className="mt-4">
-                                    <ButtonComponent name="see all projects &#10140;" backgroundColor="#87CEEB"/>
+                                    <div className="test_button_large m-4">See all projects &#10140;</div>
+                                    {/*<ButtonComponent name="see all projects &#10140;" backgroundColor="#87CEEB"/>*/}
                                 </div>
                             </Link>
 

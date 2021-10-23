@@ -1,0 +1,26 @@
+.square {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    letter-spacing: .95px;
+    /*font-size: 16px;*/
+    font-weight: 700;
+    font-family: ff-nexus-typewriter,Courier,sans-serif;
+    line-height: 50px;
+    position: relative;
+    display: inline-block;
+    transition: color .33s ease-in-out,background .33s ease-in-out;
+    color: #000;
+    height: 65px;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    padding: 12px 0 10px;
+    margin: -11px 4px 0;
+    background: #fffea9;
+    width: 100px;
+    box-shadow: 3px 3px 0 #000;
+    border: 2px solid #000;
+}

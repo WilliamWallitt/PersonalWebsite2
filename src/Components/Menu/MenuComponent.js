@@ -11,10 +11,8 @@ import HomePageComponent from "../HomePage/HomePageComponent";
 import AboutPageComponent from "../AboutPage/AboutPageComponent";
 import GitHubComponent from "../GithubPage/GitHubComponent";
 import ProjectsComponent from "../ProjectsPage/ProjectsComponent";
-import SpotifyHomePage from "../SpotifyPage/SpotifyHomePage";
-import image from "../../Assets/logo.PNG"
-import TagComponent from "../GithubPage/TagComponent";
 import ContactComponent from "../ContactPage/ContactComponent";
+import "../Button/test_button.css"
 
 
 
@@ -39,7 +37,7 @@ export default function MenuComponent() {
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/" className="text-decoration-none text-dark">
                                     {/*<ButtonComponent name="Home" backgroundColor="transparent"/>*/}
-                                    <h1 style={{fontSize: "1.3rem"}}>
+                                    <h1 style={{fontSize: "1.3rem"}} className="test_button_large">
                                         Home
                                     </h1>
                                 </Link>
@@ -47,7 +45,7 @@ export default function MenuComponent() {
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/about" className="text-decoration-none text-dark">
                                     {/*<ButtonComponent name="About" backgroundColor="transparent"/>*/}
-                                    <h1 style={{fontSize: "1.3rem"}}>
+                                    <h1 style={{fontSize: "1.3rem"}} className="test_button_large">
                                         About
                                     </h1>
                                 </Link>
@@ -55,14 +53,14 @@ export default function MenuComponent() {
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/github" className="text-decoration-none text-dark">
                                     {/*<ButtonComponent name="Github" backgroundColor="transparent"/>*/}
-                                    <h1 style={{fontSize: "1.3rem"}}>
+                                    <h1 style={{fontSize: "1.3rem"}} className="test_button_large">
                                         Github
                                     </h1>
                                 </Link>
                             </NavLink>
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/projects" className="text-decoration-none text-dark">
-                                    <h1 style={{fontSize: "1.3rem"}}>
+                                    <h1 style={{fontSize: "1.3rem"}} className="test_button_large">
                                         Projects
                                     </h1>
                                     {/*<ButtonComponent name="Projects" backgroundColor="transparent"/>*/}
@@ -71,7 +69,7 @@ export default function MenuComponent() {
                             <NavLink className="h6 text-start p-1 m-1">
                                 <Link to="/contact" className="text-decoration-none text-dark">
                                     {/*<ButtonComponent name="Contact" backgroundColor="transparent"/>*/}
-                                    <h1 style={{fontSize: "1.3rem"}}>
+                                    <h1 style={{fontSize: "1.3rem"}} className="test_button_large">
                                         Contact
                                     </h1>
                                 </Link>

@@ -2,6 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Card, CardImg, Container, Image, Row} from "react-bootstrap";
 import TagComponent from "../GithubPage/TagComponent";
+import "../Button/square.css"
+
 
 export default function Project(props) {
 
@@ -57,18 +59,14 @@ export default function Project(props) {
                                 // backgroundColor: "#eeff1f",
                                 // color: "#570861"
                             }}>
-                                <p style={{fontWeight: "lighter", fontSize: "1rem", textAlign: "start", backgroundColor: "#c6f6d5"}}
-                                   className="mx-3 my-2 p-1">
+                                <p style={{fontWeight: "lighter", textAlign: "center", fontSize: "0.8rem", backgroundColor: "#c6f6d5"}}
+                                   className="mx-3 my-2 p-1 square">
                                     {tag}
                                 </p>
                             </div>
                         ))}
                     </Container>
                 </Row>
-                <Row>
-                    <h1>.</h1>
-                </Row>
-
             </Card.Text>
         </Card>
 
